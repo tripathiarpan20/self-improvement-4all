@@ -2,7 +2,7 @@
 
 This project is done under the partial fulfilment of MSc AI & ML course at The University of Birmingham.
 
-#Background
+# Background
 
 In the contemporary world with an uncertain future and the widespread sense of self-alienation
 among modern people, there is a necessity of universal support for self-improvement. This
@@ -19,7 +19,7 @@ Under the project, the objectives/implemented features are as follows:
 
 
 
-#References:
+# References:
 - [Langchain](https://github.com/hwchase17/langchain)
 - [Generative Agents](https://arxiv.org/abs/2304.03442)
 - [Huggingface Transformers](https://github.com/huggingface/transformers)
