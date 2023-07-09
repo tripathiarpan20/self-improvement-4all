@@ -15,7 +15,8 @@ Under this project, the objectives/implemented features are as follows:
 Additional scope:
 - [ ] Compatibility with future open-source/LLaMa-based models via integration with Huggingface/oobabooga text-generation-webui, assuming sufficient alignment, instruction-following capabilities and knowledge of psychology in the LLM.
 
-![image](https://github.com/tripathiarpan20/self-improv-4-all/assets/42506819/186f4d07-c480-4e43-8a74-92f13f66c207)
+![image](https://github.com/tripathiarpan20/self-improvement-4all/assets/42506819/357013ba-1c94-4b17-8f07-e818dc74d87a)
+
 
 
 # References:
@@ -37,7 +38,7 @@ Additional scope:
 - [ ] Enhancing defence against prompt injection attacks for added safety.
 
 # License:
-All usage of this work is permitted 
+All usage of this work is permitted except the ones mentioned below.
 
 # Forbidden usage:
 - [ ] Usage of this work or derivatives of this work with closed-source OpenAI/Google/Anthropic models to create services that erroneously ensures data-privacy/data-ownership to users.
