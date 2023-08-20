@@ -10,6 +10,9 @@ RUN apt-get update && \
     apt-get -y install -qq git && \
     apt-get -y install -qq python3-pip
 
+# Install setuptools
+RUN python3 -m pip install --no-cache-dir --upgrade setuptools pip
+
 # Clone the repository
 RUN git clone https://github.com/oobabooga/text-generation-webui
 
@@ -19,7 +22,7 @@ WORKDIR /content/text-generation-webui
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt && \
     pip3 install --no-cache-dir -U gradio==3.28.3 && \
-    pip3 install --no-cache-dir setuptools sentence_transformers langchain==0.0.253 faiss-cpu==1.7.4 streamlit
+    pip3 install --no-cache-dir sentence_transformers langchain==0.0.253 faiss-cpu==1.7.4 streamlit
 
 # Download the model
 RUN python3 download-model.py TheBloke/WizardLM-13B-V1.1-GPTQ
