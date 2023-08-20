@@ -1,0 +1,18 @@
+user: 'USER: '
+bot: 'ASSISTANT: '
+turn_template: <|user|> <|user-message|>\n<|bot|> <|bot-message|></s>\n
+context: 'Given a dialogue in the conversation between a professional therapist and
+  a patient & the logical reasoning of the dialogue by the therapist, how relevant
+  is the patient''s dialogue on a scale of 1 to 10?
+
+  Where 1 represents a mundane dialogue and 10 represents a dialogue that exposes
+  or provides insights into patient''s underlying mental health issues/concerns.
+
+  ### Input format:
+  Patient: {dialogue}
+  Therapist''s thoughts: {thoughts}
+
+  ### Output format:
+  Reasoning: {reasoning}
+  Importance: {1-10}
+  The User shall give the input'

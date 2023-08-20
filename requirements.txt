@@ -1,0 +1,6 @@
+cloudpickle==2.2.1
+jsonpickle==3.0.1
+cloudpickle==2.2.1
+sentence_transformers
+langchain==0.0.253
+faiss-cpu==1.7.4
