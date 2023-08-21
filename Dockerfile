@@ -33,6 +33,7 @@ RUN python3 download-model.py TheBloke/WizardLM-13B-V1.1-GPTQ
 
 # Expose the required port (adjust if needed)
 EXPOSE 7860
+EXPOSE 5005
 
 # Start the server
 CMD ["python3", "server.py", "--api", "--wbits", "4", "--groupsize", "128", "--model", "TheBloke_WizardLM-13B-V1.1-GPTQ", "--model_type", "llama", "--loader", "exllama"]
