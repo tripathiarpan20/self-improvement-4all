@@ -19,6 +19,10 @@ RUN git clone https://github.com/oobabooga/text-generation-webui
 # Set the working directory inside the cloned repository
 WORKDIR /content/text-generation-webui
 
+# Download the instruction templates
+RUN wget -P instruction-templates/ https://raw.githubusercontent.com/tripathiarpan20/self-improvement-4all/main/prompt%20templates/Template_recalled_dialogue_2.yaml && \
+    wget -P instruction-templates/ https://raw.githubusercontent.com/tripathiarpan20/self-improvement-4all/main/prompt%20templates/Template2.yaml
+
 # Install Python dependencies
 RUN pip3 install --no-cache-dir -r requirements.txt && \
     pip3 install --no-cache-dir -U gradio==3.28.3 && \
