@@ -33,7 +33,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt && \
 RUN git clone https://github.com/TimDettmers/bitsandbytes.git 
 WORKDIR /content/text-generation-webui/bitsandbytes
 RUN CUDA_VERSION=120 make cuda11x
-RUN python setup.py install
+RUN python3 setup.py install
 WORKDIR /content/text-generation-webui
 
 # Download the model
