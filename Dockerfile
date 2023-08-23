@@ -1,5 +1,5 @@
 # Use the specified base image
-FROM runpod/pytorch:3.10-1.13.1-116
+FROM thebloke/cuda11.8.0-ubuntu22.04-oneclick:latest
 
 # Set the working directory
 WORKDIR /content
