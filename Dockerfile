@@ -8,7 +8,8 @@ WORKDIR /content
 RUN apt-get update && \
     apt-get -y install -qq aria2 && \
     apt-get -y install -qq git && \
-    apt-get -y install -qq python3-pip
+    apt-get -y install -qq python3-pip && \
+    apt-get -y install -qq python3
 
 # Install setuptools
 RUN python3 -m pip install --no-cache-dir --upgrade setuptools pip
