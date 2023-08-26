@@ -1,4 +1,11 @@
-#Source: https://github.com/ashleykleynhans/text-generation-docker/blob/main/Dockerfile
+#git clone https://github.com/tripathiarpan20/text-generation-docker.git
+#cd text-generation-docker
+#wget https://raw.githubusercontent.com/tripathiarpan20/self-improvement-4all/main/Dockerfile.standalone
+#rm Dockerfile
+#mv Dockerfile.standalone Dockerfile
+
+
+#Original script/forked from: https://github.com/ashleykleynhans/text-generation-docker/blob/main/Dockerfile
 
 # Stage 1: Base
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04 as base
