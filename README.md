@@ -1,3 +1,4 @@
+[Demo videos](https://youtube.com/playlist?list=PLT2iBnm59O8t4iR40XcsdL3nLRs-Z0X6t&si=hL9lYdjMdaLQjuf7)
 # Self-improvement-4-all
 
 This project is done under the partial fulfilment of MSc AI & ML course at The University of Birmingham.
