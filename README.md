@@ -1,4 +1,8 @@
 [Demo videos](https://youtube.com/playlist?list=PLT2iBnm59O8t4iR40XcsdL3nLRs-Z0X6t&si=hL9lYdjMdaLQjuf7)
+
+https://github.com/tripathiarpan20/self-improvement-4all/assets/42506819/878f8f5c-aef9-445c-8826-38be397c3d2a
+
+
 # Self-improvement-4-all
 
 This project is done under the partial fulfilment of MSc AI & ML course at The University of Birmingham.
