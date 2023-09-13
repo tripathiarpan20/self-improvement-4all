@@ -24,10 +24,11 @@ Additional scope:
 
 # Installation
 
-The instructions to run the work on Google Colab is provided in the [notebook](https://colab.research.google.com/drive/1xi8cQSrYpoI4Xwo6k1wMl4SgZKXA77xI?usp=sharing).
+The instructions to run the work on Google Colab is provided in the [notebook](https://colab.research.google.com/drive/1xi8cQSrYpoI4Xwo6k1wMl4SgZKXA77xI?usp=sharing) and can be run free of cost on the Tesla T4 instance under a daily quota limit.
 
 An illustrated walkthrough for the remote deployment of the LLM container is provided in the final dissertation report.
-The first step involves building the container:
+
+The first step involves building the Docker container:
 ```
 git clone https://github.com/tripathiarpan20/self-improvement-4all
 cd self-improvement-4all
@@ -41,6 +42,33 @@ After the above commands are successfully run, the docker container would be ava
 
 Next, go to [runpod.io](https://www.runpod.io/) and sign up and add credits, on the dashboard go to the 'Templates' option under the 'Manage' tab, and choose the 'New Template' option.
 Fill the required fields with the container name as required, an example is given below:
+
+
+
+Next, go to the 'Community Cloud' choose a GPU tier to deploy the container template on a suitable GPU as a pod, the pod with the chosen model (WizardLM v1.1 13B) has been tested to work sufficiently on the RTX A4000 16GB VRAM instance. 
+
+Once the pod has finished deploying, accessible via the 'Pods' section under the 'Manage' tab, select 'Start Web Terminal, followed by 'Connect to web terminal', which opens a new window with a shell instance for further interaction. 
+After waiting for a few minutes, the model would automatically load, this can be highlighted via the availability of all the displayed HTTP ports and increased GPU usage in the UI.
+
+Upon the proper deployment of the pod, copy the address of the pod in the launched web terminal, as highlighted in the search bar in the screenshot below: 
+
+
+Then on the Linux client system, setup the repository with the following commands:
+```
+git clone https://github.com/tripathiarpan20/self-improvement-4all
+cd self-improvement-4all
+```
+In the `streamchat_runpod.py` file, replace the ID in the `URI` variable, for example:  
+`URI = 'wss://ay7akx8j6pesjm-5005.proxy.runpod.net/api/v1/chat-stream'`, here we would need to replace `ay7akx8j6pesjm` with the Runpod pod ID.
+
+Then setup the virtual environment for the application:
+```
+apt install python3.10-venv
+python3 -m venv selfimprov4all
+source selfimprov4all/bin/activate
+pip install -r requirements.txt
+```
+
 
 # References:
 - [Langchain](https://github.com/hwchase17/langchain)
