@@ -22,7 +22,25 @@ Additional scope:
 
 ![image](https://github.com/tripathiarpan20/self-improvement-4all/assets/42506819/357013ba-1c94-4b17-8f07-e818dc74d87a)
 
+# Installation
 
+The instructions to run the work on Google Colab is provided in the [notebook](https://colab.research.google.com/drive/1xi8cQSrYpoI4Xwo6k1wMl4SgZKXA77xI?usp=sharing).
+
+An illustrated walkthrough for the remote deployment of the LLM container is provided in the final dissertation report.
+The first step involves building the container:
+```
+git clone https://github.com/tripathiarpan20/self-improvement-4all
+cd self-improvement-4all
+rm Dockerfile
+mv Dockerfile.standalone Dockerfile
+docker build -t <username>/self-improv-4-all:v1 
+docker push <username>/self-improv-4-all:v1 
+```
+
+After the above commands are successfully run, the docker container would be available on Dockerhub and ready to deploy on Runpod. 
+
+Next, go to [runpod.io](https://www.runpod.io/) and sign up and add credits, on the dashboard go to the 'Templates' option under the 'Manage' tab, and choose the 'New Template' option.
+Fill the required fields with the container name as required, an example is given below:
 
 # References:
 - [Langchain](https://github.com/hwchase17/langchain)
@@ -34,6 +52,8 @@ Additional scope:
 - [text-generation-inference](https://github.com/huggingface/text-generation-inference)
 - [text-generation-webui](https://github.com/oobabooga/text-generation-webui)
 
+# Evaluation
+The evaluation was done through the [evaluation form](https://forms.gle/4hZDo9GcxcY3fVD19) based on ~30 reviews. The insights have been reported in the final dissertation report.
 
 # Scope for Future work:
 - [ ] Extension of the work to virtual therapy, requiring sufficient alignment and knowledge within the designated LLM.
