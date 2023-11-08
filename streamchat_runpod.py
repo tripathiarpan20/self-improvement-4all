@@ -1,3 +1,4 @@
+import websockets
 import datetime
 import asyncio
 import json
@@ -31,8 +32,10 @@ except ImportError:
     print("Websockets package not found. Make sure it's installed.")
 
 # For local streaming, the websockets are hosted without ssl - ws://
-HOST = 'localhost:5005'
-URI = f'ws://{HOST}/api/v1/chat-stream'
+#HOST = 'https://fsk3h6m1uv3if8-7860.proxy.runpod.net'
+#URI = f'ws://{HOST}/api/v1/chat-stream'
+URI = 'wss://ay7akx8j6pesjm-5005.proxy.runpod.net/api/v1/chat-stream'
+
 global_stream = ''
 joi_thoughts = ''
 joi_message = ''
@@ -95,7 +98,7 @@ st.session_state.therapeutic_txt = 'logs/memory_therapeutic.txt'
 st.session_state.empathetic_txt = 'logs/memory_empathetic.txt'
 
 
-VECTOR_STORE_ROOT = '/content/vector_mems'
+VECTOR_STORE_ROOT = os.path.join(os.getcwd(), 'vector_mems')
 if 'dialogue_memory' not in st.session_state:
   if os.path.exists(os.path.join(VECTOR_STORE_ROOT, 'dialogue') + '.pbz2'):
     st.session_state.dialogue_memory = load_vector_memory(VECTOR_STORE_ROOT, 'dialogue')

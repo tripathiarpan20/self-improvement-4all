@@ -1,6 +1,9 @@
 cloudpickle==2.2.1
 jsonpickle==3.0.1
-cloudpickle==2.2.1
-sentence_transformers
+sentence_transformers==2.2.2
 langchain==0.0.253
 faiss-cpu==1.7.4
+websockets==11.0.3
+gradio==3.41.0
+streamlit==1.26.0
+safetensors==0.3.3
